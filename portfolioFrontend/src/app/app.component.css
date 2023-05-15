@@ -1,0 +1,23 @@
+
+.mainContainer {
+  color: aliceblue;
+  position: relative;
+}
+
+.banner {
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 24px;
+  margin-left: 12px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .banner {
+    height: 380px;
+  }
+}

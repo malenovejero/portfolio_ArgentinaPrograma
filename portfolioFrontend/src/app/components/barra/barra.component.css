@@ -1,0 +1,21 @@
+.barra{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+img{
+  height: 60px;
+}
+
+
+.redes img, i {
+  height: 25px;
+  margin: 0 5px;
+}
+
+.barraLink:hover {
+  opacity: 0.8;
+}
+

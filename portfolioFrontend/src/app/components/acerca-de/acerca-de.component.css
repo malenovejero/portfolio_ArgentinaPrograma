@@ -1,0 +1,53 @@
+h1{
+  text-align: center;
+}
+
+span{
+  text-align: center;
+  display: block;
+}
+
+.acercaDeContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.contacto {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.contacto, .info-about {
+  z-index: 1;
+}
+
+.fotoPerfil {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.info-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (max-width: 575px) {
+  .contacto {
+    margin-top: 12px;
+  }
+
+  .fotoPerfil {
+    width: 250px;
+  }
+
+  .info-about {
+    margin-top: 52px;
+    text-align: center;
+  }
+
+  .acercaDeContainer {
+    margin-bottom: 24px;
+  }
+}
