@@ -1,8 +1,39 @@
 
-<div class="proyectosContainer">
-    <h2>Proyectos</h2>
+<div>
+  <div class="proyectosContainer">
+    <div class="sectionTitle">
+      <h2>Proyectos</h2>
+    </div>
+    <div>
+      <div class="items-list">
+        <div *ngFor=" let proItem of proyectosList" class="itemPro">
+          <div class="puesto row">
+            <div class="col-xs-12 col-md-4 col-lg-2">
+              <a href="{{proItem.projectUrl}}">
+                <img src="{{proItem.imageUrl}}" class="img-thumbnail rounded float-start imgExp">
+              </a>
+            </div>
+            <div class="col-xs-12 col-md-8 col-lg-10">
+              <div class="titleAndButtonsContainer">
+                <h3>{{proItem.title}} {{proItem.date}}</h3>
+              </div>
+              <p>{{proItem.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <div class="proyecto row">
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+  <div class="proyecto row">
       <div class="col-sx-12 col-md-4 col-lg-4 projects">
         <a href="https://www.introduccionalaprogramacion.com.ar/tps2c2021/grupo07/oscar.html">
        <img src="https://www.introduccionalaprogramacion.com.ar/img/tps2c2021/grupo07.jpg" class="img-thumbnail rounded float-start" alt="poster-juegoOvejaOscar" > </a>
@@ -29,14 +60,4 @@
           con la huerta agroecológica La Esperanza, ubicada en Marcos Paz</p>
       </div>
     </div>
-
-  </div>
-
-
-
-
-
-
-<div>
-
-</div>
+-->

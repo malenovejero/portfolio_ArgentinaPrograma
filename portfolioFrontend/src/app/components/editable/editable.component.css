@@ -1,0 +1,10 @@
+.botonera{
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cancelButton{
+  margin-left: 0.5rem;
+}

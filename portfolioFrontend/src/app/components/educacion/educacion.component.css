@@ -1,4 +1,4 @@
-.seccionEducacion {
+.educacionContainer {
   margin-top: 36px;
 }
 
@@ -8,4 +8,9 @@
 
 .imgEdu {
   width: 200px;
+}
+
+.sectionTitle, .titleAndButtonsContainer {
+  display: flex;
+  justify-content: space-between;
 }

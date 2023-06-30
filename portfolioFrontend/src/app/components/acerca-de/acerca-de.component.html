@@ -2,9 +2,25 @@
   <div class="row acercaDeContainer">
 
     <div  class="col-xs-12 col-sm-6 col-lg-6 contacto">
-      <img class="img-fluid fotoPerfil" src="../../../assets/img/fotoPerfil-malenOL.jpeg"
+      <img class="img-fluid fotoPerfil" src="{{miPortfolio?.imageLink}}"
       alt="Malen Ovejero L">
 
+      <h1>{{miPortfolio?.nameSurname}}</h1>
+      <span>{{miPortfolio?.location}}</span>
+      <span>{{miPortfolio?.email}}</span>
+    </div>
+
+    <button type="button" class="editData" *ngIf="user" (click)="onEditar($event)">Editar sección</button>
+
+    <div class="col-xs-12 col-sm-6 col-lg-6 info-about">
+      <h2>{{miPortfolio?.profession}}</h2>
+      <p>{{miPortfolio?.description}}</p>
+    </div>
+
+  </div>
+
+
+  <!--
       <h1> Malen Ovejero Lanzavecchia</h1>
       <span>Buenos Aires(Argentina)</span>
       <span> male.ovej@gmail.com</span>
@@ -17,10 +33,4 @@
     </div>
 
   </div>
-
-
-
-
-
-
-
+-->

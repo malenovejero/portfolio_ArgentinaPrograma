@@ -1,43 +1,25 @@
-<div class="row">
-  <!-- INICIO MODAL HEADER -->
-  <div class="modal-header --modHEADER">
-      <!-- INICIO TITULO -->
-      <h2 class="modal-title">
-          <span class="-fontVIOLETA">.</span>
-          <span class="-fontAMARILLO">login</span>
-      </h2>
-      <!-- FIN TITULO -->
-
-      <!-- INICIO BOTON CERRAR VENTANA -->
-      <a href="#" class="-btnCRUD" (click)="activeModal.dismiss('Cross click')">
-          <i class="fa-solid fa-xmark"></i>
-      </a>
-      <!-- FIN BOTON CERRAR VENTANA -->
-  </div>
-  <!-- FIN MODAL HEADER -->
-
-  <!-- INICIO MODAL BODY -->
-  <div class="modal-body --modBODY">
-      <!-- INICIO FORMULARIO -->
-      <form (ngSubmit)="onLogin()" novalidate #f="ngForm">
-          <div class="form-outline form-white mb-4">
-              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required>
-              <label class="form-label" for="nombreUsuario">Usuario</label>
-          </div>
-          <div class="form-outline form-white mb-4">
-              <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required>
-              <label class="form-label" for="password">Contraseña</label>
-          </div>
-
-          <!-- INICIO BOTON SUBMIT -->
-          <div class="-btnOK">
-              <button class="btn btn-light" type="submit">
-                  <i class="fa-solid fa-thumbs-up"></i>
-              </button>
-          </div>
-          <!-- FIN BOTON SUBMIT -->
-      </form>
-      <!-- FIN FORMULARIO -->
-  </div>
-  <!-- FIN MODAL BODY -->
+<div class="loginPage col-12 col-md-8 col-lg-6 col-xl-5">
+  <form [formGroup]="form" class="loginCard" (ngSubmit)="onEnviar($event)">
+    <h2 class="mb-3">Ingresar</h2>
+    <div class="mb-3">
+      <label for="exampleInputEmail1"
+      class="form-label">Usuario</label>
+      <input type="text" [ngClass]="{'is-invalid':Username?.errors && Username?.touched,
+      'is-valid': !Username?.errors && Username?.touched}"
+      formControlName="username" class="form-control" id="username">
+      <div *ngIf="Username?.errors && Username?.touched">
+        <p *ngIf="Username?.hasError('required')" class="text-danger">
+          El usuario es requerido
+        </p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input type="password" formControlName="password" class="form-control" id="password">
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="errorLogIn">
+      <p class="mb-0"> Usuario y/o contraseña incorrectos</p>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
 </div>

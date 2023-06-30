@@ -33,6 +33,34 @@ span{
   justify-content: flex-end;
 }
 
+
+.editData {
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  z-index: 10;
+  left:70%;
+  top: 10%;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  transition: all .3s;
+  touch-action: manipulation;
+}
+
+
+.editData:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+
 @media (max-width: 575px) {
   .contacto {
     margin-top: 12px;

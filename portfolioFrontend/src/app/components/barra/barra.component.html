@@ -1,17 +1,21 @@
 <div class="barra">
-  <img src="../../../assets/img/APLogo.png" alt="logo Argentina Programa">
-
-
+  <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa">
+    <img src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1674860780/APLogo-20-20.png" title="Argentina Programa" alt="logo Argentina Programa">
+  </a>
 
   <div class="redes">
-    <a href="" class="barraLink"><i class="fa-regular fa-user"></i></a>
+    <span *ngIf="!currentUser; else logoutButton">
+      <a href="login"  class="barraLink" title="Iniciar Sesion"><i class="fa-regular fa-user"></i></a>
+    </span>
+    <ng-template #logoutButton>
+      <a class="barraLink" title="Cerrar Sesion" (click)="onClickLogout()"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </ng-template>
 
-
-    <a class="barraLink" href="https://github.com/malenovejero">
+    <a class="barraLink" href="https://github.com/malenovejero" title="Github">
       <img src="../../../assets/img/github.png" alt="github">
     </a>
 
-    <a class="barraLink" href="https://www.linkedin.com/in/malen-ovejero-lanzavecchia-76a183126/">
+    <a class="barraLink" href="https://www.linkedin.com/in/malen-ovejero-lanzavecchia-76a183126/" title="Linkedin">
       <img src="../../../assets/img/linkedin.png" alt="linkedin">
     </a>
   </div>

@@ -3,7 +3,15 @@
   <div class="row">
     <h2>Skills</h2>
 
-        <div class="slider">
+      <div class="slider" >
+        <img *ngFor=" let skillsItem of skillsList" class="imgSkill" src="{{skillsItem.imageUrl}}" alt="{{skillsItem.title}}" title="{{skillsItem.title}}">
+      </div>
+  </div>
+</div>
+
+
+      <!--
+         <div class="slider">
             <img class="imgSkill" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="logo-Html">
             <img class="imgSkill" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="logo-Css">
             <img class="imgSkill" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="logo-bootstrap">
@@ -17,5 +25,5 @@
             <img class="imgSkill" src="https://www.kindpng.com/picc/m/53-539760_scrum-logo-hd-png-download.png" alt="scrum">
             <img class="imgSkill" src="https://img2.freepng.es/20180425/ywe/kisspng-organization-canonical-link-element-industry-proje-career-growth-5ae1382f044de4.9187805315247094230176.jpg" alt="organizacion">
         </div>
-        </div>
-        </div>
+      -->
+

@@ -5,3 +5,14 @@
 .imgExp {
   width: 200px;
 }
+
+.sectionTitle, .titleAndButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .editData{
+    top: 17%;
+  }
+}
